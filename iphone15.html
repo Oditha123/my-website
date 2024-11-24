@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IPhone 15 Pro</title>
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #000;
+            color: #fff;
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        /* Navigation */
+        .nav {
+            background-color: #111;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 1rem;
+        }
+
+        .nav a:hover {
+            text-decoration: underline;
+        }
+
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .hero img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        /* Section Styling */
+        .section {
+            margin: 30px 0;
+        }
+
+        .section-title {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            border-bottom: 2px solid #444;
+            padding-bottom: 5px;
+        }
+
+        .content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            align-items: center;
+        }
+
+        .content img {
+            width: 100%;
+            max-width: 300px;
+            border-radius: 10px;
+        }
+
+        .content p {
+            flex: 1;
+            font-size: 1rem;
+            color: #ccc;
+        }
+
+        /* Button Styling */
+        .btn {
+            background-color: #0071e3;
+            color: white;
+            padding: 12px 30px;
+            font-size: 1.1rem;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+            display: inline-block;
+            margin-top: 30px;
+        }
+
+        .btn:hover {
+            background-color: #005bb5;
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 50px;
+            border-top: 1px solid #444;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <div class="nav">
+        <a href="index.html">Home</a>
+        <a href="#finish">Finish</a>
+        <a href="#capacity">Capacity</a>
+        <a href="#size-weight">Size & Weight</a>
+        <a href="#display">Display</a>
+        <a href="#camera">Camera</a>
+    </div>
+
+    <!-- Hero Section -->
+    <div class="hero">
+        <img src="iphone15pro.png" alt="iPhone 15 Pro">
+        <h1>IPhone 15 Pro</h1>
+        <p>The ultimate smartphone experience</p>
+        <!-- Buy Now Button -->
+        <a href="https://www.apple.com/shop/buy-iphone/iphone-15" class="btn">Buy Now</a>
+    </div>
+
+    <!-- Sections -->
+    <div id="finish" class="section">
+        <h2 class="section-title">Finish</h2>
+        <div class="content">
+            <img src="finish-options.jpg" alt="Finish Options">
+            <p>Available in Black Titanium, White Titanium, Blue Titanium, and Natural Titanium.</p>
+        </div>
+    </div>
+
+    <div id="capacity" class="section">
+        <h2 class="section-title">Capacity</h2>
+        <div class="content">
+            <p>128GB, 256GB, 512GB, and 1TB options available.</p>
+        </div>
+    </div>
+
+    <div id="size-weight" class="section">
+        <h2 class="section-title">Size & Weight</h2>
+        <div class="content">
+            <img src="size-weight.jpg" alt="Size and Weight">
+            <p>Dimensions: 146.7 mm x 70.6 mm x 7.8 mm<br>Weight: 187 grams</p>
+        </div>
+    </div>
+
+    <div id="display" class="section">
+        <h2 class="section-title">Display</h2>
+        <div class="content">
+            <img src="display.jpg" alt="Display">
+            <p>6.1-inch Super Retina XDR display with ProMotion technology and Always-On display.</p>
+        </div>
+    </div>
+
+    <div id="camera" class="section">
+        <h2 class="section-title">Camera</h2>
+        <div class="content">
+            <img src="camera.jpg" alt="Camera">
+            <p>Pro camera system
+                48MP Main: 24 mm, ƒ/1.78 aperture, second‑generation sensor‑shift optical image stabilization, 100% Focus Pixels, support for super‑high‑resolution photos (24MP and 48MP)
+                12MP Ultra Wide: 13 mm, ƒ/2.2 aperture and 120° field of view, 100% Focus Pixels
+                12MP 2x Telephoto (enabled by quad‑pixel sensor): 48 mm, ƒ/1.78 aperture, second‑generation sensor‑shift optical image stabilization, 100% Focus Pixels
+                12MP 3x Telephoto: 77 mm, ƒ/2.8 aperture, optical image stabilization
+                3x optical zoom in, 2x optical zoom out; 6x optical zoom range
+                Digital zoom up to 15x.</p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <p>&copy; 2024 Apple. All rights reserved.</p>
+    </div>
+
+</body>
+</html>

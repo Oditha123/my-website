@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buy Apple Watch</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            background-color: #000; /* Pure black background */
+            color: white;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Navbar Styling */
+        .nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background-color: #111;
+            color: white;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: white;
+            display: flex;
+            align-items: center;
+        }
+
+        .logo img {
+            width: 80px;
+            margin-right: 10px;
+        }
+
+        .nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 1rem;
+            margin-left: 20px;
+        }
+
+        .nav a:hover {
+            text-decoration: underline;
+        }
+
+        /* Product Checkout Section */
+        .checkout-section {
+            padding: 100px 20px;
+            text-align: center;
+        }
+
+        .checkout-section h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        .checkout-section p {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            color: #ccc;
+        }
+
+        .product-image {
+            width: 300px;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+            margin: 30px 0;
+        }
+
+        .price-section {
+            background-color: #111;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .price-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        .price-section p {
+            font-size: 1.5rem;
+        }
+
+        /* Features and Information Section */
+        .features {
+            background-color: #222;
+            padding: 50px 20px;
+            text-align: left;
+            margin-top: 50px;
+        }
+
+        .features h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .features ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .features li {
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+        }
+
+        .quantity-selector {
+            margin: 20px 0;
+            font-size: 1.2rem;
+        }
+
+        .quantity-selector input {
+            width: 60px;
+            padding: 10px;
+            font-size: 1rem;
+            text-align: center;
+            border-radius: 5px;
+            border: none;
+            background-color: #333;
+            color: white;
+        }
+
+        /* Buy Button */
+        .buy-btn {
+            background-color: #0071e3;
+            color: white;
+            padding: 15px 30px;
+            font-size: 1.2rem;
+            text-decoration: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            margin-top: 30px;
+        }
+
+        .buy-btn:hover {
+            background-color: #005bb5;
+        }
+
+        /* Footer */
+        .footer {
+            background-color: #111;
+            color: white;
+            padding: 30px 0;
+            text-align: center;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <div class="nav">
+        <div class="logo">
+            <img src="logo.png" alt="Apple Logo">
+            Apple
+        </div>
+        <div class="links">
+            <a href="index.html">Home</a>
+            <a href="products.html">Products</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </div>
+
+    <!-- Product Checkout Section -->
+    <div class="checkout-section">
+        <h1>Buy Apple Watch</h1>
+        <p>The latest Apple Watch with advanced health features. Track your heart rate, monitor ECG, and more.</p>
+
+        <!-- Apple Watch Image -->
+        <img class="product-image" src="applewatch.jpg" alt="Apple Watch">
+
+        <!-- Price Section -->
+        <div class="price-section">
+            <h2>Price: $399.99</h2>
+            <p>Color: Space Gray</p>
+        </div>
+
+        <!-- Features Section -->
+        <div class="features">
+            <h2>Features & Specifications</h2>
+            <ul>
+                <li>Advanced health monitoring features: ECG, Blood Oxygen, Heart Rate monitoring</li>
+                <li>GPS and Cellular options available</li>
+                <li>Always-On Retina Display</li>
+                <li>Swimproof and durable design</li>
+                <li>Up to 18 hours of battery life</li>
+                <li>Compatible with iPhone 6s and later</li>
+                <li>Built-in GPS and compass</li>
+                <li>Fall detection and emergency SOS</li>
+            </ul>
+        </div>
+
+        <!-- Quantity Selector -->
+        <div class="quantity-selector">
+            <label for="quantity">Quantity: </label>
+            <input type="number" id="quantity" name="quantity" min="1" max="10" value="1">
+        </div>
+
+        <!-- Buy Now Button -->
+        <!-- Link to official Apple Store's Apple Watch Buy page -->
+        <a href="https://www.apple.com/shop/buy-watch/apple-watch" class="buy-btn" target="_blank">Buy Now</a>
+    </div>
+
+    <!-- Footer Section -->
+    <div class="footer">
+        <p>&copy; 2024 Apple. All rights reserved.</p>
+    </div>
+</body>
+
+</html>

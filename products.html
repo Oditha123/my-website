@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apple Products</title>
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f1f1f1;
+            color: #333;
+            padding: 0;
+            margin: 0;
+        }
+
+        /* Navigation Bar */
+        .nav {
+            background-color: #000;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 30px;
+        }
+
+        .nav .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+        }
+
+        .nav .logo img {
+            width: 40px;
+            margin-right: 10px;
+        }
+
+        .nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 15px;
+            font-size: 1rem;
+        }
+
+        .nav a:hover {
+            text-decoration: underline;
+        }
+
+        /* Hero Section */
+        .hero {
+            background-color: #111;
+            color: white;
+            text-align: center;
+            padding: 60px 20px;
+        }
+
+        .hero img {
+            max-width: 80px;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+        }
+
+        /* Product Section */
+        .products {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            padding: 30px;
+        }
+
+        .product-card {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            padding: 20px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .product-card img {
+            width: 100%;
+            max-width: 200px;
+            margin: 0 auto 15px;
+        }
+
+        .product-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+
+        .product-card p {
+            font-size: 1rem;
+            margin-bottom: 15px;
+            color: #666;
+        }
+
+        .product-card .btn {
+            text-decoration: none;
+            color: white;
+            background-color: #0071e3;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 1rem;
+            transition: background-color 0.3s ease;
+        }
+
+        .product-card .btn:hover {
+            background-color: #005bb5;
+        }
+
+        .product-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Footer Section */
+        .footer {
+            background-color: #000;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <div class="nav">
+        <div class="logo">
+            <img src="logo.png" alt="Apple Logo">
+            Apple
+        </div>
+        <div class="links">
+            <a href="#">Home</a>
+            <a href="#">Products</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <div class="hero">
+        <img src="logo.png" alt="Apple Logo">
+        <h1>Our Products</h1>
+        <p>Discover the latest innovations from Apple.</p>
+    </div>
+
+    <!-- Product Section -->
+    <div class="products">
+        <!-- Product 1 -->
+        <div class="product-card">
+            <img src="iphone15.jpg" alt="iPhone 15">
+            <h3>iPhone 15</h3>
+            <p>The latest innovation from Apple.</p>
+            <a href="#" class="btn">Buy Now</a>
+        </div>
+        <!-- Product 2 -->
+        <div class="product-card">
+            <img src="macbookpro.jpg" alt="MacBook Pro">
+            <h3>MacBook Pro</h3>
+            <p>Power and performance for professionals.</p>
+            <a href="#" class="btn">Buy Now</a>
+        </div>
+        <!-- Product 3 -->
+        <div class="product-card">
+            <img src="applewatch.jpg" alt="Apple Watch">
+            <h3>Apple Watch</h3>
+            <p>Health, fitness, and connectivity on your wrist.</p>
+            <a href="#" class="btn">Buy Now</a>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <div class="footer">
+        <p>&copy; 2024 Apple. All rights reserved.</p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Apple</title>
+    <style>
+        /* Reset some default browser styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body styling */
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            background-color: #f1f1f1;
+            color: #333;
+            overflow-x: hidden;
+        }
+
+        /* Custom Mouse Cursor */
+        .cursor {
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: rgba(0, 0, 0, 0.8);
+            pointer-events: none;
+            transform: translate(-50%, -50%);
+            transition: transform 0.1s ease-out;
+            z-index: 1000;
+        }
+
+        /* Navigation Bar */
+        .nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background-color: #000;
+            color: white;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: white;
+            display: flex;
+            align-items: center;
+        }
+
+        .logo img {
+            width: 80px;
+            margin-right: 10px;
+        }
+
+        .nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 1rem;
+            margin-left: 20px;
+        }
+
+        .nav a:hover {
+            text-decoration: underline;
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            background: linear-gradient(45deg, #333, #555);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            position: relative;
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            margin-bottom: 20px;
+        }
+
+        /* About Content */
+        .about-section {
+            padding: 40px;
+            background-color: #fff;
+            color: #333;
+            text-align: center;
+        }
+
+        .about-section h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        .about-section p {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }
+
+        /* Footer Section */
+        .footer {
+            background-color: #333;
+            color: white;
+            padding: 30px 0;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        /* Additional Styling for Interactive Elements */
+        .nav a:hover {
+            cursor: pointer;
+            transform: scale(1.05);
+            transition: transform 0.3s ease;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <div class="nav">
+        <div class="logo">
+            <img src="gg.png" alt="Logo">
+            Apple
+        </div>
+        <div class="links">
+            <a href="index.html" class="interactive">Home</a>
+            <a href="about.html" class="interactive">About</a>
+            <a href="#" class="interactive">Products</a>
+            <a href="#" class="interactive">Contact</a>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <div class="hero">
+        <div>
+            <h1>About Us</h1>
+            <p>We are Apple, innovating the future of technology.</p>
+        </div>
+    </div>
+
+    <!-- About Content -->
+    <div class="about-section">
+        <h2>Our Story</h2>
+        <p>Apple Inc. is a global leader in technology, creating innovative products that enrich lives.</p>
+        <p>Founded in 1976, Apple revolutionized the personal computer industry and has since expanded to include mobile devices, software, and services.</p>
+    </div>
+
+    <!-- Footer Section -->
+    <div class="footer">
+        <p>&copy; 2024 Apple. All rights reserved.</p>
+    </div>
+
+    <!-- Custom Mouse Cursor -->
+    <div class="cursor" id="cursor"></div>
+
+    <script>
+        // Custom Cursor Functionality
+        const cursor = document.getElementById('cursor');
+
+        document.addEventListener('mousemove', (e) => {
+            cursor.style.left = `${e.pageX}px`;
+            cursor.style.top = `${e.pageY}px`;
+        });
+
+        // Hover effect for interactive elements
+        const navLinks = document.querySelectorAll('.nav a');
+
+        navLinks.forEach(link => {
+            link.addEventListener('mouseover', () => {
+                cursor.style.transform = 'scale(1.5)';
+            });
+            link.addEventListener('mouseout', () => {
+                cursor.style.transform = 'scale(1)';
+            });
+        });
+    </script>
+</body>
+</html>

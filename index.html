@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apple-like Website</title>
+    <style>
+        /* Reset some default browser styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body styling */
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            background-color: #000;
+            color: white;
+            overflow-x: hidden;
+        }
+
+        /* Smooth Scroll Effect */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Custom Mouse Cursor */
+        .cursor {
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: rgba(0, 0, 0, 0.8);
+            pointer-events: none;
+            transform: translate(-50%, -50%);
+            transition: transform 0.1s ease-out;
+            z-index: 1000;
+        }
+
+        /* Navigation Bar */
+        .nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background-color: #111;
+            color: white;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: white;
+            display: flex;
+            align-items: center;
+        }
+
+        .logo img {
+            width: 80px;
+            margin-right: 10px;
+        }
+
+        .nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 1rem;
+            margin-left: 20px;
+        }
+
+        .nav a:hover {
+            text-decoration: underline;
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            background: linear-gradient(45deg, #333, #555);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            position: relative;
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            margin-bottom: 20px;
+        }
+
+        .btn {
+            background-color: #0071e3;
+            color: white;
+            padding: 15px 30px;
+            font-size: 1.2rem;
+            text-decoration: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #005bb5;
+        }
+
+        /* Footer Section */
+        .footer {
+            background-color: #111;
+            color: white;
+            padding: 30px 0;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        /* Product Section */
+        .products {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            padding: 50px 0;
+        }
+
+        .product {
+            margin: 20px;
+            padding: 20px;
+            background-color: #000; /* Set background to pure black */
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            text-align: center;
+            transition: transform 0.3s ease;
+            color: white; /* Set text color to white for contrast */
+        }
+
+        .product:hover {
+            transform: scale(1.05);
+        }
+
+        .product img {
+            width: 100%;
+            border-radius: 8px;
+        }
+
+        .product h2 {
+            font-size: 1.5rem;
+            margin-top: 20px;
+        }
+
+        .product p {
+            color: #ccc; /* Slightly lighter gray text for better contrast */
+        }
+
+        /* Updated Button Styling for Products */
+        .product .btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 1rem;
+            color: white;
+            background-color: #007bff;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+
+        .product .btn:hover {
+            background-color: #0056b3;
+        }
+
+        /* Scroll Down Arrow */
+        .scroll-down-arrow,
+        .scroll-up-arrow {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 3rem; /* Increased font-size */
+            cursor: pointer;
+            color: white; /* Changed to white */
+            animation: bounce 2s infinite; /* Animation applied */
+            transition: transform 0.3s ease;
+        }
+
+        /* Scroll Up Arrow */
+        .scroll-up-arrow {
+            bottom: 80px; /* Position the up arrow above the down arrow */
+            display: none; /* Initially hidden */
+        }
+
+        .scroll-down-arrow:hover,
+        .scroll-up-arrow:hover {
+            transform: translateX(-50%) translateY(5px);
+        }
+
+        /* Bouncing Animation */
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <div class="nav">
+        <div class="logo">
+            <img src="logo.png" alt="Apple Logo">
+            Apple
+        </div>
+        <div class="links">
+            <a href="#hero">Home</a>
+            <a href="#products">Products</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <div id="hero" class="hero">
+        <div>
+            <h1>Welcome to Apple</h1>
+            <p>Scroll down to explore our products.</p>
+        </div>
+    </div>
+
+    <!-- Scroll Down Arrow -->
+    <div class="scroll-down-arrow" id="scrollDownArrow">&#8595;</div>
+
+    <!-- Scroll Up Arrow -->
+    <div class="scroll-up-arrow" id="scrollUpArrow">&#8593;</div>
+
+    <!-- Products Section -->
+    <div id="products" class="products">
+        <div class="product">
+            <img src="iphone15.jpg" alt="iPhone 15">
+            <h2>iPhone 15</h2>
+            <p>The latest innovation from Apple.</p>
+            <a href="iphone15.html" class="btn">Buy Now</a>
+        </div>
+        <div class="product">
+            <img src="macbookpro.jpg" alt="MacBook Pro">
+            <h2>MacBook Pro</h2>
+            <p>Power and performance for professionals.</p>
+            <a href="macbookpro.html" class="btn">Buy Now</a>
+        </div>
+        <div class="product">
+            <img src="applewatch.jpg" alt="Apple Watch">
+            <h2>Apple Watch</h2>
+            <p>Health, fitness, and connectivity on your wrist.</p>
+            <a href="applewatch.html" class="btn">Buy Now</a>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <div class="footer">
+        <p>&copy; 2024 Apple. All rights reserved.</p>
+    </div>
+
+    <!-- Custom Mouse Cursor -->
+    <div class="cursor" id="cursor"></div>
+
+    <script>
+        // Custom Cursor Functionality
+        const cursor = document.getElementById('cursor');
+
+        document.addEventListener('mousemove', (e) => {
+            cursor.style.left = `${e.pageX}px`;
+            cursor.style.top = `${e.pageY}px`;
+        });
+
+        // Scroll Down Arrow Functionality
+        const scrollDownArrow = document.getElementById('scrollDownArrow');
+        const scrollToSection = document.getElementById('products');  // Targeting the products section
+        scrollDownArrow.addEventListener('click', () => {
+            window.scrollBy({ top: window.innerHeight, behavior: 'smooth' });
+            scrollDownArrow.style.display = 'none';  // Hide the arrow when clicked
+        });
+
+        // Scroll Up Arrow Functionality
+        const scrollUpArrow = document.getElementById('scrollUpArrow');
+        scrollUpArrow.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' }); // Scroll back to the top
+        });
+
+        // Show/Hide Scroll Arrows Based on Scroll Position
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                scrollDownArrow.style.display = 'none';  // Hide scroll-down arrow
+                scrollUpArrow.style.display = 'block';   // Show scroll-up arrow
+            } else {
+                scrollDownArrow.style.display = 'block';  // Show scroll-down arrow
+                scrollUpArrow.style.display = 'none';    // Hide scroll-up arrow
+            }
+        });
+    </script>
+</body>
+
+</html>
